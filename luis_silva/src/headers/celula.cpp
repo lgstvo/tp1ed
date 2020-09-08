@@ -1,6 +1,6 @@
 #include "headers/celula.hpp"
 
-int CelulaNave::CelulaNave(int identificacao){
+CelulaNave::CelulaNave(int identificacao){
     this->identificacao = identificacao;
 }
 
