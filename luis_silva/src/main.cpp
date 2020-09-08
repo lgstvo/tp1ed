@@ -1,6 +1,8 @@
 #include <cstdio>
 #include <iostream>
 
+using namespace std;
+
 int main() {
   int num_frotas;
   scanf("%d",&num_frotas);
