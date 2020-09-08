@@ -7,19 +7,22 @@ class PilhaGaragem{
 
     private:
         int tamanho;
-        CelulaNave garagemDeNaves[50001];
+        static const int MAXTAM = 50001
+        CelulaNave garagemDeNaves[MAXTAM];
 
     public:
         
         PinhaGaragem();
         PilhaGaragem(int tamanho);
 
-        CelulaNave getTopo();
+        int getTamanho();
+        CelulaNave* getGaragem();
+        CelulaNave getTamanho();
 
         void setTamanho(int tamanho);
         
-        void empilha();
-        void desempilha();
+        void empilha(CelulaNave nave);
+        CelulaNave desempilha();
         void imprime();
 
 };
