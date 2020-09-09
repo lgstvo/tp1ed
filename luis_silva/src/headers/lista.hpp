@@ -16,13 +16,18 @@ class ListaCombate{
         ListaCombate();
         ~ListaCombate();
 
-        CelulaNave getPosicao();
+        CelulaNave getPrimeira();
+        CelulaNave getUltima();
+        CelulaNave getPosicao(int posicao);
+
+        void setPrimeira(CelulaNave* nave);
+        void setUltima(CelulaNave* nave);
 
         void insere();
 
         CelulaNave removeNave(int naveID);
         void limpa();
-
+        void imprime();
 };
 
 #endif

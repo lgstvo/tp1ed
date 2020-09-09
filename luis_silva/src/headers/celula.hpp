@@ -5,9 +5,11 @@ class CelulaNave{
 
     private:
         int identificacao;
+        CelulaNave *proxima;
 
     public:
 
+        CelulaNave();
         CelulaNave(int identificacao);
         ~CelulaNave();
 
