@@ -11,7 +11,7 @@ CelulaNave* ListaCombate::posiciona(int posicao, bool antes){
     CelulaNave* ponteiroPosicao = getPrimeira();
     int walker = 0;
 
-    while(walker != posicao || ponteiroPosicao->proxima == NULL){
+    while(walker != posicao && ponteiroPosicao->proxima != NULL){
         ponteiroPosicao = ponteiroPosicao->proxima;
         walker++;
     }
@@ -33,7 +33,7 @@ CelulaNave ListaCombate::getPosicao(int posicao){
     CelulaNave *ponteiroIterativo = getPrimeira();
     int walker = 0;
 
-    while(walker != posicao || ponteiroIterativo->proxima == NULL){
+    while(walker != posicao && ponteiroIterativo->proxima != NULL){
         ponteiroIterativo = ponteiroIterativo->proxima
         walker++;
     }
