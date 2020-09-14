@@ -38,13 +38,13 @@ TMPOUT=tp1.testresult
 $(EXEC): main.cpp fila.o pilha.o lista.o
 	$(CC) $(CFLAGS) main.cpp fila.o pilha.o lista.o -o $(EXEC)
 
-fila.o: headers/foo.cc # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
+fila.o: headers/fila.cpp # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
 	$(CC) $(CFLAGS) -c headers/fila.cpp -o fila.o
 
-pilha.o: headers/foo.cc # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
+pilha.o: headers/pilha.cpp # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
 	$(CC) $(CFLAGS) -c headers/pilha.cpp -o pilha.o
 
-lista.o: headers/foo.cc # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
+lista.o: headers/lista.cpp # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
 	$(CC) $(CFLAGS) -c headers/lista.cpp -o lista.o
 
 test: $(EXEC)
