@@ -2,7 +2,7 @@
 #define OFICINA_DE_REPARO
 
 #include "headers/celula.hpp"
-sdakdmasd
+
 class FilaOficina{
 
     private:
