@@ -5,7 +5,7 @@ class CelulaNave{
 
     private:
         int identificacao;
-        CelulaNave *proxima;
+        CelulaNave* proxima;
 
     public:
         CelulaNave();

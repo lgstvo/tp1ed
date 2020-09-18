@@ -1,4 +1,4 @@
-#include "headers/pilha.hpp"
+#include "pilha.hpp"
 #include <iostream>
 #include <cstdio>
 
@@ -14,11 +14,11 @@ CelulaNave* PilhaGaragem::getGaragem(){
     return this->garagemDeNaves;
 }
 
-int PilhasGaragem::getTamanho(){
+int PilhaGaragem::getTamanho(){
     return this->tamanho;
 }
 
-CelulaNave PilhaGaragem::getTamanho(){
+CelulaNave PilhaGaragem::getTopo(){
     CelulaNave* garagem = getGaragem();
     int topo = getTamanho();
     return garagem[topo];
@@ -43,7 +43,7 @@ CelulaNave PilhaGaragem::desempilha(){
     CelulaNave *garagem = getGaragem();
     CelulaNave naveRetirada;
 
-    naveRetirada = garagem[topo]
+    naveRetirada = garagem[topo];
     topo--;
     setTamanho(topo);
 

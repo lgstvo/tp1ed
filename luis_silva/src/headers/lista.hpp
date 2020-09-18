@@ -1,7 +1,7 @@
 #ifndef COMBATE
 #define COMBATE
 
-#include "headers/celula.hpp"
+#include "celula.hpp"
 
 class ListaCombate{
 
@@ -14,16 +14,16 @@ class ListaCombate{
         ListaCombate();
         ~ListaCombate();
 
-        CelulaNave getPrimeira();
-        CelulaNave getUltima();
-        CelulaNave getPosicao(int posicao);
+        CelulaNave* getPrimeira();
+        CelulaNave* getUltima();
+        CelulaNave* getPosicao(int posicao);
 
         void setPrimeira(CelulaNave* nave);
         void setUltima(CelulaNave* nave);
 
-        void insere();
+        void insere(CelulaNave* nave);
 
-        CelulaNave removeNave(int naveID);
+        CelulaNave* removeNave(int naveID);
         void limpa();
         void imprime();
 };

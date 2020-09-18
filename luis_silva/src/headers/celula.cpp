@@ -1,4 +1,5 @@
-#include "headers/celula.hpp"
+#include "celula.hpp"
+#include <iostream>
 
 CelulaNave::CelulaNave(){
     this->identificacao = -1;
@@ -15,9 +16,11 @@ int CelulaNave::getID(){
 }
 
 CelulaNave* CelulaNave::getProxima(){
-    return this->proxima
+    return this->proxima;
 }
 
 void CelulaNave::setProxima(CelulaNave* nave){
     this->proxima = nave;
 }
+
+CelulaNave::~CelulaNave(){}

@@ -1,4 +1,4 @@
-#include "headers/lista.hpp"
+#include "lista.hpp"
 #include <iostream>
 #include <cstdio>
 
@@ -21,23 +21,23 @@ CelulaNave* ListaCombate::posiciona(int posicao, bool antes){
     return ponteiroPosicao;
 }
 
-CelulaNave ListaCombate::getPrimeira(){
+CelulaNave* ListaCombate::getPrimeira(){
     return this->primeira;
 }
 
-CelulaNave ListaCombate::getUltima(){
+CelulaNave* ListaCombate::getUltima(){
     return this->ultima;
 }
 
-CelulaNave ListaCombate::getPosicao(int posicao){
+CelulaNave* ListaCombate::getPosicao(int posicao){
     CelulaNave *ponteiroIterativo = getPrimeira();
     int walker = 0;
 
     while(walker != posicao && ponteiroIterativo->getProxima() != NULL){
-        ponteiroIterativo = ponteiroIterativo->getProxima()
+        ponteiroIterativo = ponteiroIterativo->getProxima();
         walker++;
     }
-    return ponteiroIterativo
+    return ponteiroIterativo;
 }
 
 void ListaCombate::setPrimeira(CelulaNave* nave){
@@ -48,16 +48,16 @@ void ListaCombate::setUltima(CelulaNave* nave){
     this->ultima = nave;
 }
 
-void ListaCombate::insere(CelulaNave nave){
+void ListaCombate::insere(CelulaNave* nave){
     CelulaNave* ultima = getUltima();
-    ultima->setProxima(ultima->getProxima()) = nave;
+    ultima->setProxima(nave);
 }
 
-CelulaNave ListaCombate::removeNave(int naveID){
+CelulaNave* ListaCombate::removeNave(int naveID){
     primeira = getPrimeira();
-    CelulaNave* ponteiroRemove = primera->getProxima();
-    CelulaNave naveRemovida;
-    posicao = 0
+    CelulaNave* ponteiroRemove = primeira->getProxima();
+    CelulaNave* naveRemovida;
+    int posicao = 0;
     
     while(ponteiroRemove->getID() != naveID){
         ponteiroRemove = ponteiroRemove->getProxima();
@@ -74,7 +74,6 @@ CelulaNave ListaCombate::removeNave(int naveID){
 void ListaCombate::limpa(){
     CelulaNave* ponteiroLimpa = getPrimeira();
     CelulaNave* primeira = getPrimeira();
-    CelulaNave* ultima = getUltima();
     ponteiroLimpa = ponteiroLimpa->getProxima();
 
     while(ponteiroLimpa->getProxima() != NULL){

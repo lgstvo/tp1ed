@@ -1,4 +1,4 @@
-#include "headers/fila.hpp"
+#include "fila.hpp"
 #include <iostream>
 #include <cstdio>
 
@@ -8,7 +8,7 @@ FilaOficina::FilaOficina(){
     this->fim = this->inicio;
 }
 
-CelulaNave* FilaOficina::getTamanho(){
+int FilaOficina::getTamanho(){
     return this->tamanho;
 }
 
@@ -16,30 +16,32 @@ CelulaNave* FilaOficina::getInicio(){
     return this->inicio;
 }
 
-CelulaNave* FilaOficica::getFim(){
+CelulaNave* FilaOficina::getFim(){
     return this->fim;
 }
 
-void setTamanho(int novoTamanho){
+void FilaOficina::setTamanho(int novoTamanho){
     this->tamanho = novoTamanho;
 }
 
-void FilaOficina::enfilera(CelulaNave nave){
+void FilaOficina::setFim(CelulaNave* nave){
+    this->fim = nave;
+}
+
+void FilaOficina::enfilera(CelulaNave* nave){
     int tamanho = getTamanho();
     CelulaNave* fim = getFim();
-    CelulaNave* inicio = getInicio();
     
     fim->setProxima(nave);
     fim = nave;
     tamanho++;
 }
 
-CelulaNave FilaOficina::removeNave(){
+CelulaNave* FilaOficina::removeNave(){
     int tamanho = getTamanho();
     CelulaNave* inicio = getInicio();
-    CelulaNave* fim = getFim();
 
-    CelulaNave desenfilerada;
+    CelulaNave* desenfilerada;
 
     inicio = inicio->getProxima();
     desenfilerada = inicio;
@@ -58,9 +60,9 @@ void FilaOficina::limpa(){
     ponteiroApagador = inicio->getProxima();
 
     while(ponteiroApagador != NULL){
-        inicio->setProxima(ponteiroApagador->getProximo());
+        inicio->setProxima(ponteiroApagador->getProxima());
         delete ponteiroApagador;
-        ponteiroApagador = inicio->getProximo();
+        ponteiroApagador = inicio->getProxima();
     }
     setTamanho(0);
     setFim(inicio);

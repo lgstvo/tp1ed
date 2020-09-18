@@ -1,22 +1,22 @@
 #ifndef GARAGEM
 #define GARAGEM
 
-#include "headers/celula.hpp"
+#include "celula.hpp"
 
 class PilhaGaragem{
 
     private:
         int tamanho;
-        static const int MAXTAM = 50001
+        static const int MAXTAM = 50001;
         CelulaNave garagemDeNaves[MAXTAM];
 
     public:
-        PinhaGaragem();
+        PilhaGaragem();
         PilhaGaragem(int tamanho);
 
         int getTamanho();
         CelulaNave* getGaragem();
-        CelulaNave getTamanho();
+        CelulaNave getTopo();
 
         void setTamanho(int tamanho);
         
