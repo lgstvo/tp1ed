@@ -7,16 +7,20 @@ class FilaOficina{
 
     private:
         int tamanho;
-        CelulaNave* primeira;
-        CelulaNave* ultima;
+        CelulaNave* inicio;
+        CelulaNave* fim;
 
     public:
         FilaOficina();
         ~FilaOficina();
 
-        CelulaNave getPrimeiro();
+        CelulaNave* getInicio();
+        CelulaNave* getFim();
+        int getTamanho();
 
-        void enfilera();
+        void setTamanho(int tamanho);
+
+        void enfilera(CelulaNave nave);
 
         CelulaNave removeNave();
         void limpa();
