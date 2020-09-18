@@ -12,7 +12,6 @@ class ListaCombate{
         CelulaNave* posiciona(int posicao, bool antes);
 
     public:
-
         ListaCombate();
         ~ListaCombate();
 
