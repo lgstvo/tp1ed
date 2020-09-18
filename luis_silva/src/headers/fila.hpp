@@ -11,7 +11,6 @@ class FilaOficina{
         CelulaNave* ultima;
 
     public:
-
         FilaOficina();
         ~FilaOficina();
 

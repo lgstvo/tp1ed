@@ -2,10 +2,7 @@
 #define GARAGEM
 
 #include "headers/celula.hpp"
-sdvdvlkasdmlfaksdnksd
-adsfkasdfads
-fdasdf
-dasfsadd
+
 class PilhaGaragem{
 
     private:
@@ -14,7 +11,6 @@ class PilhaGaragem{
         CelulaNave garagemDeNaves[MAXTAM];
 
     public:
-        
         PinhaGaragem();
         PilhaGaragem(int tamanho);
 

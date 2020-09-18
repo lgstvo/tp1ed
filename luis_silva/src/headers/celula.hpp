@@ -8,13 +8,12 @@ class CelulaNave{
         CelulaNave *proxima;
 
     public:
-
         CelulaNave();
-        CelulaNave(int identificacao);
         ~CelulaNave();
 
-        int getID();
+        CelulaNave(int identificacao);
 
+        int getID();
 };
 
 #endif
