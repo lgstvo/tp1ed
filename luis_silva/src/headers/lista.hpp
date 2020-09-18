@@ -6,7 +6,6 @@
 class ListaCombate{
 
     private:
-        int tamanho;
         CelulaNave* primeira;
         CelulaNave* ultima;
         CelulaNave* posiciona(int posicao, bool antes);

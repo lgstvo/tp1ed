@@ -11,12 +11,12 @@ CelulaNave* ListaCombate::posiciona(int posicao, bool antes){
     CelulaNave* ponteiroPosicao = getPrimeira();
     int walker = 0;
 
-    while(walker != posicao && ponteiroPosicao->proxima != NULL){
-        ponteiroPosicao = ponteiroPosicao->proxima;
+    while(walker != posicao && ponteiroPosicao->getProxima() != NULL){
+        ponteiroPosicao = ponteiroPosicao->getProxima();
         walker++;
     }
 
-    if(!antes) ponteiroPosicao = ponteiroPosicao->proxima;
+    if(!antes) ponteiroPosicao = ponteiroPosicao->getProxima();
 
     return ponteiroPosicao;
 }
@@ -33,8 +33,8 @@ CelulaNave ListaCombate::getPosicao(int posicao){
     CelulaNave *ponteiroIterativo = getPrimeira();
     int walker = 0;
 
-    while(walker != posicao && ponteiroIterativo->proxima != NULL){
-        ponteiroIterativo = ponteiroIterativo->proxima
+    while(walker != posicao && ponteiroIterativo->getProxima() != NULL){
+        ponteiroIterativo = ponteiroIterativo->getProxima()
         walker++;
     }
     return ponteiroIterativo
@@ -50,24 +50,24 @@ void ListaCombate::setUltima(CelulaNave* nave){
 
 void ListaCombate::insere(CelulaNave nave){
     CelulaNave* ultima = getUltima();
-    ultima->proxima = nave;
+    ultima->setProxima(ultima->getProxima()) = nave;
 }
 
 CelulaNave ListaCombate::removeNave(int naveID){
     primeira = getPrimeira();
-    CelulaNave* ponteiroRemove = primera->proxima;
+    CelulaNave* ponteiroRemove = primera->getProxima();
     CelulaNave naveRemovida;
     posicao = 0
     
     while(ponteiroRemove->getID() != naveID){
-        ponteiroRemove = ponteiroRemove->proxima;
+        ponteiroRemove = ponteiroRemove->getProxima();
         posicao++;
     }
 
     ponteiroRemove = posiciona(posicao, 1);
-    naveRemovida = ponteiroRemove->proxima;
-    ponteiroRemove->proxima = naveRemovida->proxima;
-    naveRemovida->proxima = NULL;
+    naveRemovida = ponteiroRemove->getProxima();
+    ponteiroRemove->setProxima(naveRemovida->getProxima());
+    naveRemovida->setProxima(NULL);
     return naveRemovida;
 }
 
@@ -75,12 +75,12 @@ void ListaCombate::limpa(){
     CelulaNave* ponteiroLimpa = getPrimeira();
     CelulaNave* primeira = getPrimeira();
     CelulaNave* ultima = getUltima();
-    ponteiroLimpa = ponteiroLimpa->proxima;
+    ponteiroLimpa = ponteiroLimpa->getProxima();
 
-    while(ponteiroLimpa->proxima != NULL){
-        primeira->proxima = ponteiroLimpa->proxima;
+    while(ponteiroLimpa->getProxima() != NULL){
+        primeira->setProxima(ponteiroLimpa->getProxima());
         delete ponteiroLimpa;
-        ponteiroLimpa = primeira->proxima;
+        ponteiroLimpa = primeira->getProxima();
     }
 
     ultima = primeira;
@@ -90,14 +90,14 @@ void ListaCombate::limpa(){
 void ListaCombate::imprime(){
     CelulaNave* ponteiroImprime = getPrimeira();
     int impressao;
-    ponteiroImprime = ponteiroImprime->proxima;
-    while(ponteiroImprime->proxima != NULL){
+    ponteiroImprime = ponteiroImprime->getProxima();
+    while(ponteiroImprime->getProxima() != NULL){
 
         impressao = ponteiroImprime->getID();
         std::cout << impressao << std::endl;
         //printf("%d\n", impressao);
 
-        ponteiroImprime = ponteiroImprime->proxima;
+        ponteiroImprime = ponteiroImprime->getProxima();
     }
 
 }

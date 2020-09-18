@@ -12,6 +12,8 @@ class CelulaNave{
         ~CelulaNave();
 
         CelulaNave(int identificacao);
+        void setProxima(CelulaNave* nave);
+        CelulaNave* getProxima();
 
         int getID();
 };

@@ -13,3 +13,11 @@ CelulaNave::CelulaNave(int identificacao){
 int CelulaNave::getID(){
     return this->identificacao;
 }
+
+CelulaNave* CelulaNave::getProxima(){
+    return this->proxima
+}
+
+void CelulaNave::setProxima(CelulaNave* nave){
+    this->proxima = nave;
+}
