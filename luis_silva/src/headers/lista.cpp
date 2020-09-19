@@ -100,3 +100,5 @@ void ListaCombate::imprime(){
     }
 
 }
+
+ListaCombate::~ListaCombate(){}

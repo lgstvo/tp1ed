@@ -28,9 +28,11 @@ void PilhaGaragem::setTamanho(int tamanho){
     this->tamanho = tamanho;
 }
 
-void PilhaGaragem::empilha(CelulaNave nave){
+void PilhaGaragem::empilha(int idNave){
     int topo = getTamanho();
     CelulaNave *garagem = getGaragem();
+
+    CelulaNave nave = CelulaNave(idNave);
     
     topo++;
     garagem[topo] = nave;

@@ -20,7 +20,7 @@ class PilhaGaragem{
 
         void setTamanho(int tamanho);
         
-        void empilha(CelulaNave nave);
+        void empilha(int idNave);
         CelulaNave desempilha();
         void imprime();
 

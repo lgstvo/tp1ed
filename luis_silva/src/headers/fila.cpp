@@ -67,3 +67,5 @@ void FilaOficina::limpa(){
     setTamanho(0);
     setFim(inicio);
 }
+
+FilaOficina::~FilaOficina(){}

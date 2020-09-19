@@ -1,20 +1,47 @@
 #include <cstdio>
 #include <iostream>
 
+#include "headers/celula.hpp"
+#include "headers/fila.hpp"
+#include "headers/pilha.hpp"
+#include "headers/lista.hpp"
+
 using namespace std;
 
 int main() {
-  int num_frotas;
-  scanf("%d",&num_frotas);
-  int i;
-  for(i=0; i < num_frotas; i++){
-    int id_nave;
-    scanf("%d",&id_nave);
-    //desenvolver o código para inserção correta das naves que são lidas
-  }
-  int operacao;
-  while(scanf("%d", &operacao) != EOF) {
-    //desenvolver o código relacionado as operações a serem realizadas
-  }
-  return 0;
+
+	int num_frotas, i, id_nave, operacao;
+
+	PilhaGaragem Garagem;
+	ListaCombate EmCombate;
+	FilaOficina Oficina;
+
+	cin >> num_frotas;
+
+	for(i=0; i < num_frotas; i++){
+		cin >> id_nave;
+		Garagem.empilha(id_nave);
+	}
+
+	cin >> operacao;
+
+	while(!cin.eof()){
+		if(operacao == 0){
+
+		}
+		else if(operacao == -1){
+
+		}
+		else if(operacao == -2){
+			
+		}
+		else if(operacao == -3){
+			
+		}
+		else{
+
+		}
+		cin >> operacao;
+	}
+	return 0;
 }
