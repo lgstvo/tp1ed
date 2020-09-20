@@ -1,4 +1,4 @@
-#include <cstdio>
+
 #include <iostream>
 
 #include "headers/celula.hpp"
@@ -25,7 +25,7 @@ int main() {
 
 	cin >> operacao;
 
-	while(!cin.eof()){
+	while(1){
 		if(operacao == 0){
 
 		}
@@ -37,6 +37,10 @@ int main() {
 		}
 		else if(operacao == -3){
 			
+		}
+		else if(operacao == EOF){
+			cout << "fim" << endl;
+			break;
 		}
 		else{
 
