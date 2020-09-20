@@ -24,7 +24,7 @@ int main() {
 		Garagem.empilha(id_nave);
 	}
 
-	while( !(cin >> operacao == EOF)){
+	while( !(cin >> operacao == cin.eof())){
 		if(operacao == 0){
 			
 		}
