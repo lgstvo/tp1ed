@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <cstdio>
 
 #include "headers/celula.hpp"
 #include "headers/fila.hpp"
