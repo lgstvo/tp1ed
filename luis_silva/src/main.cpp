@@ -41,10 +41,8 @@ int main() {
 			/*
 			*TRECHO TIRADO DO DOCUMENTO OFICIAL DA ESPECIFICAÇÃO DO TP1*
 			indica que a equipe de manutenção informou que uma nave avariada
-			foi consertada. Lembre-se que a nave consertada é sempre a com
-			maior prioridade, aquela que primeiro chegou avariada. Ao ser
-			consertada, a mensagem “nave K consertada” deve ser impressa na saída,
-			na qual K é o identificador da nave.
+			foi consertada. Ao ser consertada, a mensagem “nave K consertada”
+			deve ser impressa na saída, na qual K é o identificador da nave.
 			*/
 			Comando.um(Garagem, Oficina);
 		}
@@ -71,7 +69,8 @@ int main() {
 			foi avariada. Ao ser avariada, a mensagem “nave K avariada” 
 			deve serimpressa na sa´ıda, na qual K ´e o identificador da nave
 			*/
-			Comando.naveX(int operacao, Garagem, Oficina)
+			EmCombate.imprime();
+			Comando.naveX(operacao, EmCombate, Oficina);
 		}
 	}
 	return 0;

@@ -5,11 +5,11 @@ EXEC=./tp1 # nome do executavel que sera gerado, nao troque
 TMPOUT=tp1.testresult
 
 
-$(EXEC): main.cpp fila.o pilha.o lista.o celula.o
-	$(CC) $(CFLAGS) main.cpp fila.o pilha.o lista.o celula.o -o $(EXEC)
+$(EXEC): main.cpp fila.o pilha.o lista.o celula.o operacao.o
+	$(CC) $(CFLAGS) main.cpp fila.o pilha.o lista.o celula.o operacao.o -o $(EXEC)
 
 testing: main.cpp fila.o pilha.o lista.o celula.o
-	$(CC) $(CFLAGS) test.cpp fila.o pilha.o lista.o celula.o -o ./testing
+	$(CC) $(CFLAGS) test.cpp fila.o pilha.o lista.o celula.o operacao.o -o ./testing
 
 fila.o: headers/fila.cpp
 	$(CC) $(CFLAGS) -c headers/fila.cpp -o fila.o
@@ -22,6 +22,9 @@ lista.o: headers/lista.cpp
 
 celula.o: headers/celula.cpp
 	$(CC) $(CFLAGS) -c headers/celula.cpp -o celula.o
+
+operacao.o: headers/operacao.cpp
+	$(CC) $(CFLAGS) -c headers/operacao.cpp -o operacao.o
 
 test: $(EXEC)
 	@bash run_tests.sh $(EXEC) $(TMPOUT)

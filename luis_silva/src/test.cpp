@@ -34,8 +34,6 @@ int main() {
 
     EmCombate.imprime();
 
-    CelulaNave* a = EmCombate.removeNave(3);
-    Oficina.enfilera(*a);
-    Oficina.imprime();
+    
 	return 0;
 }
