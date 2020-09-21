@@ -23,8 +23,9 @@ int main() {
 		cin >> id_nave;
 		Garagem.empilha(id_nave);
 	}
+	
 
-	while( cin >> operacao != EOF){
+	while(cin >> operacao){
 		if(operacao == 0){
 			
 		}
@@ -40,7 +41,7 @@ int main() {
 		else{
 
 		}
-		cin >> operacao;
+
 	}
 	cout << "batata" << endl;
 	return 0;
