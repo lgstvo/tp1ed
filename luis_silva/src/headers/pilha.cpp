@@ -66,7 +66,7 @@ void PilhaGaragem::imprime(){
     int tamanho = getTamanho();
     CelulaNave *garagem = getGaragem();
 
-    for(int i = 0; i <= tamanho; i++){
+    for(int i = tamanho; i >= 0; i--){
         std::cout << garagem[i].getID() << std::endl;
     }
 }

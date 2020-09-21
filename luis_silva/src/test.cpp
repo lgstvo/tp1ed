@@ -15,12 +15,20 @@ int main() {
     // tested features:
     // celula getID
     // pilha setTamanho, getTamanho, PilhaGaragem, empilha, getTopo, desempilha, imprime
-    // fila
+    // fila construtor, getTamanho, getInicio, getFim, enfilera, setfim, removeNave, 
     // lista
 	PilhaGaragem Garagem = PilhaGaragem();
 	ListaCombate EmCombate;
-	FilaOficina Oficina;
+	FilaOficina Oficina = FilaOficina();
 
-    
+    Garagem.empilha(1);
+    Garagem.empilha(2);
+    Garagem.empilha(3);
+    Garagem.empilha(4);
+    Oficina.enfilera(Garagem.desempilha());
+    Oficina.enfilera(Garagem.desempilha());
+    Oficina.enfilera(Garagem.desempilha());
+    Oficina.enfilera(Garagem.desempilha());
+
 	return 0;
 }

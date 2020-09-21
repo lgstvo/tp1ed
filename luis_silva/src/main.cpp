@@ -29,7 +29,7 @@ int main() {
 			
 		}
 		else if(operacao == -1){
-
+			
 		}
 		else if(operacao == -2){
 			

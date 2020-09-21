@@ -6,7 +6,7 @@
 class FilaOficina{
     /*
     FilaOficina se refere às máquinas que foram avariadas em combate e precisam
-    de reparos. Reparos são feitos em oficinas, mas essencialmente é uma fila,
+    de reparos. Reparos são feitos em oficinas, o que essencialmente são filas,
     por isso o nome FilaOficina
     */
     private:
@@ -27,7 +27,7 @@ class FilaOficina{
 
         void setTamanho(int tamanho);
 
-        void enfilera(CelulaNave* nave);
+        void enfilera(CelulaNave nave);
 
         CelulaNave* removeNave();
         void limpa();
