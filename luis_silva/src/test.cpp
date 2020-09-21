@@ -15,7 +15,7 @@ int main() {
     // tested features:
     // celula getID
     // pilha setTamanho, getTamanho, PilhaGaragem, empilha, getTopo, desempilha, imprime
-    // fila construtor, getTamanho, getInicio, getFim, enfilera, setfim, removeNave, 
+    // fila construtor, getTamanho, getInicio, getFim, enfilera, setfim, removeNave, imprime
     // lista
 	PilhaGaragem Garagem = PilhaGaragem();
 	ListaCombate EmCombate;
@@ -29,6 +29,10 @@ int main() {
     Oficina.enfilera(Garagem.desempilha());
     Oficina.enfilera(Garagem.desempilha());
     Oficina.enfilera(Garagem.desempilha());
+
+    CelulaNave* a = Oficina.removeNave();
+
+    cout << a->getProxima()->getID() << endl;
 
 	return 0;
 }

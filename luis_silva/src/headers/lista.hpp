@@ -26,7 +26,7 @@ class ListaCombate{
         void setPrimeira(CelulaNave* nave);
         void setUltima(CelulaNave* nave);
 
-        void insere(CelulaNave* nave);
+        void insere(CelulaNave nave);
 
         CelulaNave* removeNave(int naveID);
         void limpa();

@@ -55,6 +55,7 @@ CelulaNave* FilaOficina::removeNave(){
 
     inicio = inicio->getProxima();
     desenfilerada = inicio;
+    desenfilerada->setProxima(NULL);
     setInicio(inicio);
 
     setTamanho(tamanho--);

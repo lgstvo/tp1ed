@@ -54,9 +54,9 @@ void ListaCombate::setUltima(CelulaNave* nave){
     this->ultima = nave;
 }
 
-void ListaCombate::insere(CelulaNave* nave){
+void ListaCombate::insere(CelulaNave nave){
     CelulaNave* ultima = getUltima();
-    ultima->setProxima(nave);
+    ultima->setProxima(&nave);
 }
 
 CelulaNave* ListaCombate::removeNave(int naveID){
