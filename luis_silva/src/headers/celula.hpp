@@ -21,6 +21,7 @@ class CelulaNave{
         CelulaNave* getProxima();
 
         int getID();
+        void setID(int id);
 };
 
 #endif

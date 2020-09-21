@@ -34,7 +34,7 @@ clean:
 	rm -rf pilha.o
 	rm -rf fila.o
 	rm -rf celula.o
-
+	rm -rf operacao.o
 
 # === REGRAS =====
 # ================

@@ -55,9 +55,14 @@ void ListaCombate::setUltima(CelulaNave* nave){
 }
 
 void ListaCombate::insere(CelulaNave nave){
+
     CelulaNave* ultima = getUltima();
-    ultima->setProxima(&nave);
-    setUltima(&nave);
+    CelulaNave* novaNave = new CelulaNave();
+    novaNave->setID(nave.getID());
+
+    ultima->setProxima(novaNave);
+    novaNave->setProxima(NULL);
+    setUltima(novaNave);
 }
 
 CelulaNave* ListaCombate::removeNave(int naveID){
@@ -65,11 +70,12 @@ CelulaNave* ListaCombate::removeNave(int naveID){
 
     primeira = getPrimeira();
     CelulaNave* ponteiroRemove = primeira->getProxima();
-    CelulaNave* naveRemovida;
+    CelulaNave* naveRemovida = new CelulaNave();
     int posicao = 0;
-    
+
     while(ponteiroRemove->getID() != naveID){
         ponteiroRemove = ponteiroRemove->getProxima();
+        //std::cout << "ITERACAO " << posicao << " " << ponteiroRemove->getID() << " " << naveID << std::endl;
         posicao++;
     }
 
@@ -77,6 +83,7 @@ CelulaNave* ListaCombate::removeNave(int naveID){
     naveRemovida = ponteiroRemove->getProxima();
     ponteiroRemove->setProxima(naveRemovida->getProxima());
     naveRemovida->setProxima(NULL);
+    
     return naveRemovida;
 }
 

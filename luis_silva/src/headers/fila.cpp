@@ -38,9 +38,11 @@ void FilaOficina::enfilera(CelulaNave nave){
     
     int tamanho = getTamanho();
     CelulaNave* fim = getFim();
+    CelulaNave* novaNave = new CelulaNave();
+    novaNave->setID(nave.getID());
     
-    fim->setProxima(&nave);
-    setFim(&nave);
+    fim->setProxima(novaNave);
+    setFim(novaNave);
 
     tamanho++;
 }
@@ -49,15 +51,14 @@ CelulaNave* FilaOficina::removeNave(){
     // remove a nave da fila (repara a nave)
 
     int tamanho = getTamanho();
-    CelulaNave* inicio = getInicio();
+    CelulaNave* head = getInicio();
+    CelulaNave* inicio;
 
-    CelulaNave* desenfilerada;
+    CelulaNave* desenfilerada = new CelulaNave();
 
-    inicio = inicio->getProxima();
+    inicio = head->getProxima();
     desenfilerada = inicio;
-    desenfilerada->setProxima(NULL);
-    setInicio(inicio);
-
+    head->setProxima(inicio->getProxima());
     setTamanho(tamanho--);
 
     return desenfilerada;

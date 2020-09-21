@@ -18,7 +18,7 @@ class Operacao{
         void um(PilhaGaragem&, FilaOficina&);
         void dois(PilhaGaragem&);
         void tres(FilaOficina&);
-        void naveX(int naveX, PilhaGaragem&, FilaOficina&);
-}
+        void naveX(int, ListaCombate&, FilaOficina&);
+};
 
 #endif

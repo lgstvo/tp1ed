@@ -12,26 +12,31 @@ int main() {
 
 	//int num_frotas, i, id_nave, operacao;
 
-    // tested features:
-    // celula getID
-    // pilha setTamanho, getTamanho, PilhaGaragem, empilha, getTopo, desempilha, imprime
-    // fila construtor, getTamanho, getInicio, getFim, enfilera, setfim, removeNave, imprime
-    // lista getID, getPrimeira, imprime, removeNave, setUltima
+    
 	PilhaGaragem Garagem = PilhaGaragem();
 	ListaCombate EmCombate = ListaCombate();
 	FilaOficina Oficina = FilaOficina();
+/*
+    CelulaNave nave =  CelulaNave();
+    CelulaNave* navepoint = &nave;
+    
 
-    Garagem.empilha(1);
-    Garagem.empilha(2);
-    Garagem.empilha(3);
-    Garagem.empilha(4);
-    EmCombate.insere(Garagem.desempilha());
-    EmCombate.insere(Garagem.desempilha());
-    EmCombate.insere(Garagem.desempilha());
-    EmCombate.insere(Garagem.desempilha());
+    for(int i = 0; i < 6; i++){
+        navepoint->setID(i);
+        EmCombate.insere(*navepoint);
+    }
 
-    cout << EmCombate.getPrimeira()->getID() << endl;
+*/
 
+    CelulaNave* nave = new CelulaNave();
+    CelulaNave* nave2 = new CelulaNave();
+
+    nave->setID(5);
+    nave2->setID(10);
+
+    EmCombate.insere(*nave);
+    EmCombate.insere(*nave2);
+    
     EmCombate.imprime();
 
     

@@ -15,6 +15,10 @@ int CelulaNave::getID(){
     return this->identificacao;
 }
 
+void CelulaNave::setID(int id){
+    this->identificacao = id;
+}
+
 CelulaNave* CelulaNave::getProxima(){
     return this->proxima;
 }
