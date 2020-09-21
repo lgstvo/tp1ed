@@ -3,6 +3,7 @@
 #include <cstdio>
 
 FilaOficina::FilaOficina(){
+    // Construtor
     this->tamanho = -1;
     this->inicio = new CelulaNave();
     this->fim = this->inicio;
@@ -29,6 +30,8 @@ void FilaOficina::setFim(CelulaNave* nave){
 }
 
 void FilaOficina::enfilera(CelulaNave* nave){
+    // adciona naves à fila de reparo
+
     int tamanho = getTamanho();
     CelulaNave* fim = getFim();
     
@@ -38,6 +41,8 @@ void FilaOficina::enfilera(CelulaNave* nave){
 }
 
 CelulaNave* FilaOficina::removeNave(){
+    // remove a nave da fila (repara a nave)
+
     int tamanho = getTamanho();
     CelulaNave* inicio = getInicio();
 
@@ -53,6 +58,8 @@ CelulaNave* FilaOficina::removeNave(){
 }
 
 void FilaOficina::limpa(){
+    // remove tudo da fila, sem uso prático
+
     CelulaNave* ponteiroApagador;
     inicio = getInicio();
     fim = getFim();

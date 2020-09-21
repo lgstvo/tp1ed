@@ -4,7 +4,11 @@
 #include "celula.hpp"
 
 class FilaOficina{
-
+    /*
+    FilaOficina se refere às máquinas que foram avariadas em combate e precisam
+    de reparos. Reparos são feitos em oficinas, mas essencialmente é uma fila,
+    por isso o nome FilaOficina
+    */
     private:
         int tamanho;
         CelulaNave* inicio;

@@ -3,11 +3,15 @@
 #include <cstdio>
 
 ListaCombate::ListaCombate(){
+    // Construtor
+
     this->primeira = new CelulaNave();
     this->ultima = this->primeira;
 }
 
 CelulaNave* ListaCombate::posiciona(int posicao, bool antes){
+    // Faz a manipuação de ponteiros para posicionalos em determinada posição
+
     CelulaNave* ponteiroPosicao = getPrimeira();
     int walker = 0;
 
@@ -30,6 +34,8 @@ CelulaNave* ListaCombate::getUltima(){
 }
 
 CelulaNave* ListaCombate::getPosicao(int posicao){
+    // Infelizmente, para pegar a posição X de uma nave é necessário
+    // caminhar em um loop
     CelulaNave *ponteiroIterativo = getPrimeira();
     int walker = 0;
 
@@ -54,6 +60,8 @@ void ListaCombate::insere(CelulaNave* nave){
 }
 
 CelulaNave* ListaCombate::removeNave(int naveID){
+    // remove a nave na posição naveID
+
     primeira = getPrimeira();
     CelulaNave* ponteiroRemove = primeira->getProxima();
     CelulaNave* naveRemovida;
@@ -72,6 +80,8 @@ CelulaNave* ListaCombate::removeNave(int naveID){
 }
 
 void ListaCombate::limpa(){
+    // limpa a lista, sem utilidade prática
+
     CelulaNave* ponteiroLimpa = getPrimeira();
     CelulaNave* primeira = getPrimeira();
     ponteiroLimpa = ponteiroLimpa->getProxima();
@@ -87,6 +97,8 @@ void ListaCombate::limpa(){
 }
 
 void ListaCombate::imprime(){
+    // imprime a lista, útil para testes
+
     CelulaNave* ponteiroImprime = getPrimeira();
     int impressao;
     ponteiroImprime = ponteiroImprime->getProxima();
@@ -94,7 +106,6 @@ void ListaCombate::imprime(){
 
         impressao = ponteiroImprime->getID();
         std::cout << impressao << std::endl;
-        //printf("%d\n", impressao);
 
         ponteiroImprime = ponteiroImprime->getProxima();
     }

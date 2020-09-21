@@ -20,7 +20,10 @@ CelulaNave* CelulaNave::getProxima(){
 }
 
 void CelulaNave::setProxima(CelulaNave* nave){
+    // função usada ná lógica da classe ListaCombate e FilaOficina
+
     this->proxima = nave;
 }
 
+// destrutor padrão da linguagem
 CelulaNave::~CelulaNave(){}
