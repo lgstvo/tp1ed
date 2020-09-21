@@ -75,13 +75,15 @@ void FilaOficina::limpa(){
 }
 
 void imprime(){
+    // caminnha na fila imprimindo os valores das células
+
     CelulaNave* inicioDaFila = getInicio();
     CelulaNave* ponteiroImprime;
 
     ponteiroImprime = inicioDaFila->getProxima();
 
     while(ponteiroImprime != NULL){
-        std::cout << ponteiroImprime.getID << std::endl;
+        std::cout << ponteiroImprime.getID() << std::endl;
         ponteiroImprime = ponteiroImprime->getProxima();
     }
 }
