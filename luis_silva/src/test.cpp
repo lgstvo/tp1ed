@@ -10,12 +10,17 @@ using namespace std;
 
 int main() {
 
-	int num_frotas, i, id_nave, operacao;
+	//int num_frotas, i, id_nave, operacao;
 
-	PilhaGaragem Garagem;
+    // tested features:
+    // celula getID
+    // pilha setTamanho, getTamanho, PilhaGaragem, empilha, getTopo, desempilha, imprime
+    // fila
+    // lista
+	PilhaGaragem Garagem = PilhaGaragem();
 	ListaCombate EmCombate;
 	FilaOficina Oficina;
 
-	
+    
 	return 0;
 }
