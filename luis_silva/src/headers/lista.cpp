@@ -57,6 +57,7 @@ void ListaCombate::setUltima(CelulaNave* nave){
 void ListaCombate::insere(CelulaNave nave){
     CelulaNave* ultima = getUltima();
     ultima->setProxima(&nave);
+    setUltima(&nave);
 }
 
 CelulaNave* ListaCombate::removeNave(int naveID){
@@ -102,7 +103,7 @@ void ListaCombate::imprime(){
     CelulaNave* ponteiroImprime = getPrimeira();
     int impressao;
     ponteiroImprime = ponteiroImprime->getProxima();
-    while(ponteiroImprime->getProxima() != NULL){
+    while(ponteiroImprime != NULL){
 
         impressao = ponteiroImprime->getID();
         std::cout << impressao << std::endl;

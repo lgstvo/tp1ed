@@ -16,23 +16,26 @@ int main() {
     // celula getID
     // pilha setTamanho, getTamanho, PilhaGaragem, empilha, getTopo, desempilha, imprime
     // fila construtor, getTamanho, getInicio, getFim, enfilera, setfim, removeNave, imprime
-    // lista
+    // lista getID, getPrimeira, imprime, removeNave, setUltima
 	PilhaGaragem Garagem = PilhaGaragem();
-	ListaCombate EmCombate;
+	ListaCombate EmCombate = ListaCombate();
 	FilaOficina Oficina = FilaOficina();
 
     Garagem.empilha(1);
     Garagem.empilha(2);
     Garagem.empilha(3);
     Garagem.empilha(4);
-    Oficina.enfilera(Garagem.desempilha());
-    Oficina.enfilera(Garagem.desempilha());
-    Oficina.enfilera(Garagem.desempilha());
-    Oficina.enfilera(Garagem.desempilha());
+    EmCombate.insere(Garagem.desempilha());
+    EmCombate.insere(Garagem.desempilha());
+    EmCombate.insere(Garagem.desempilha());
+    EmCombate.insere(Garagem.desempilha());
 
-    CelulaNave* a = Oficina.removeNave();
+    cout << EmCombate.getPrimeira()->getID() << endl;
 
-    cout << a->getProxima()->getID() << endl;
+    EmCombate.imprime();
 
+    CelulaNave* a = EmCombate.removeNave(3);
+    Oficina.enfilera(*a);
+    Oficina.imprime();
 	return 0;
 }
