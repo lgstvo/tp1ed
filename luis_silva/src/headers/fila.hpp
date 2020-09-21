@@ -31,6 +31,7 @@ class FilaOficina{
 
         CelulaNave* removeNave();
         void limpa();
+        void imprime();
 
 };
 

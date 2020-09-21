@@ -62,7 +62,6 @@ void FilaOficina::limpa(){
 
     CelulaNave* ponteiroApagador;
     inicio = getInicio();
-    fim = getFim();
 
     ponteiroApagador = inicio->getProxima();
 
@@ -73,6 +72,18 @@ void FilaOficina::limpa(){
     }
     setTamanho(0);
     setFim(inicio);
+}
+
+void imprime(){
+    CelulaNave* inicioDaFila = getInicio();
+    CelulaNave* ponteiroImprime;
+
+    ponteiroImprime = inicioDaFila->getProxima();
+
+    while(ponteiroImprime != NULL){
+        std::cout << ponteiroImprime.getID << std::endl;
+        ponteiroImprime = ponteiroImprime->getProxima();
+    }
 }
 
 FilaOficina::~FilaOficina(){}
