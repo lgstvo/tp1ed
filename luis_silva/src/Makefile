@@ -38,6 +38,9 @@ TMPOUT=tp1.testresult
 $(EXEC): main.cpp fila.o pilha.o lista.o celula.o
 	$(CC) $(CFLAGS) main.cpp fila.o pilha.o lista.o celula.o -o $(EXEC)
 
+testing: main.cpp fila.o pilha.o lista.o celula.o
+	$(CC) $(CFLAGS) test.cpp fila.o pilha.o lista.o celula.o -o ./testing
+
 fila.o: headers/fila.cpp # esse eh um exemplo, nao utilize esse tipo de nome (foo.cc, foo.h, foo.o) para seus arquivos
 	$(CC) $(CFLAGS) -c headers/fila.cpp -o fila.o
 

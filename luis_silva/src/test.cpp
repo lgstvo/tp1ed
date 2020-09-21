@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cstdio>
 
@@ -17,27 +16,6 @@ int main() {
 	ListaCombate EmCombate;
 	FilaOficina Oficina;
 
-	cin >> num_frotas;
-
-	for(i=0; i < num_frotas; i++){
-		cin >> id_nave;
-		Garagem.empilha(id_nave);
-	}
 	
-	while(cin >> operacao){
-		if(operacao == 0){
-			
-		}
-		else if(operacao == -1){
-
-		}
-		else if(operacao == -2){
-			
-		}
-		else if(operacao == -3){
-			
-		}
-	}
-	cout << "batata" << endl;
 	return 0;
 }
