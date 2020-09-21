@@ -13,9 +13,9 @@ int main() {
 
 	int num_frotas, i, id_nave, operacao;
 
-	PilhaGaragem Garagem;
-	ListaCombate EmCombate;
-	FilaOficina Oficina;
+	PilhaGaragem Garagem = PilhaGaragem();
+	ListaCombate EmCombate = ListaCombate();
+	FilaOficina Oficina = FilaOficina();
 
 	cin >> num_frotas;
 

@@ -13,7 +13,7 @@ void Operacao::zero(PilhaGaragem &Garagem, ListaCombate &EmCombate){
     std::cout << "nave " << naveK.getID() << " em combate" << std::endl;
 }
 
-void Operacao::um(PilhaGaragem &Garagem, ListaCombate &EmCombate, FilaOficina &Oficina){
+void Operacao::um(PilhaGaragem &Garagem, FilaOficina &Oficina){
     CelulaNave* naveK = new CelulaNave();
     naveK = Oficina.removeNave();
     Garagem.empilha(naveK->getID());
@@ -21,15 +21,15 @@ void Operacao::um(PilhaGaragem &Garagem, ListaCombate &EmCombate, FilaOficina &O
     delete naveK;
 }
 
-void Operacao::dois(PilhaGaragem &Garagem, ListaCombate &EmCombate, FilaOficina &Oficina){
+void Operacao::dois(PilhaGaragem &Garagem){
     Garagem.imprime();
 }
 
-void Operacao::tres(PilhaGaragem &Garagem, ListaCombate &EmCombate, FilaOficina &Oficina){
+void Operacao::tres(FilaOficina &Oficina){
     Oficina.imprime();
 }
 
-void Operacao::naveX(int naveX, PilhaGaragem &Garagem, ListaCombate &EmCombate, FilaOficina &Oficina){
+void Operacao::naveX(int naveX, ListaCombate &EmCombate, FilaOficina &Oficina){
     CelulaNave* naveK;
     naveK = EmCombate.removeNave(naveX);
     Oficina.enfilera(&naveK);

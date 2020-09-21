@@ -15,10 +15,10 @@ class Operacao{
         Operacao();
 
         void zero(PilhaGaragem&, ListaCombate&);
-        void um(PilhaGaragem&, ListaCombate&, FilaOficina&);
-        void dois(PilhaGaragem&, ListaCombate&, FilaOficina&);
-        void tres(PilhaGaragem&, ListaCombate&, FilaOficina&);
-        void naveX(int naveX, PilhaGaragem&, ListaCombate&, FilaOficina&);
+        void um(PilhaGaragem&, FilaOficina&);
+        void dois(PilhaGaragem&);
+        void tres(FilaOficina&);
+        void naveX(int naveX, PilhaGaragem&, FilaOficina&);
 }
 
 #endif
