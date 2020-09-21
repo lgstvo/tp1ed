@@ -11,6 +11,8 @@ PilhaGaragem::PilhaGaragem(int tamanho){
 }
 
 CelulaNave* PilhaGaragem::getGaragem(){
+    // getGaragem retorna um ponteiro para o array onde estão armazenadas as células (naves)
+
     return this->garagemDeNaves;
 }
 
@@ -19,6 +21,8 @@ int PilhaGaragem::getTamanho(){
 }
 
 CelulaNave PilhaGaragem::getTopo(){
+    // retorna a célula que está na ultima posição do array
+
     CelulaNave* garagem = getGaragem();
     int topo = getTamanho();
     return garagem[topo];
@@ -29,6 +33,8 @@ void PilhaGaragem::setTamanho(int tamanho){
 }
 
 void PilhaGaragem::empilha(int idNave){
+    // adciona as células na pilha
+
     int topo = getTamanho();
     CelulaNave *garagem = getGaragem();
 
@@ -41,6 +47,8 @@ void PilhaGaragem::empilha(int idNave){
 }
 
 CelulaNave PilhaGaragem::desempilha(){
+    // tira da pilha
+
     int topo = getTamanho();
     CelulaNave *garagem = getGaragem();
     CelulaNave naveRetirada;
@@ -53,11 +61,12 @@ CelulaNave PilhaGaragem::desempilha(){
 }
 
 void PilhaGaragem::imprime(){
+    // printa a pilha, apenas para visualização e testes
+
     int tamanho = getTamanho();
     CelulaNave *garagem = getGaragem();
 
     for(int i = 0; i <= tamanho; i++){
         std::cout << garagem[i].getID() << std::endl;
-        //printf("%d\n", garagem[i]getID());
     }
 }
