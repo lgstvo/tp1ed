@@ -14,11 +14,10 @@ void Operacao::zero(PilhaGaragem &Garagem, ListaCombate &EmCombate){
 }
 
 void Operacao::um(PilhaGaragem &Garagem, FilaOficina &Oficina){
-    CelulaNave* naveK = new CelulaNave();
-    naveK = Oficina.removeNave();
-    Garagem.empilha(naveK->getID());
-    std::cout << "nave " << naveK->getID() << " consertada" << std::endl;
-    delete naveK;
+    int naveKID;
+    naveKID = Oficina.removeNave();
+    Garagem.empilha(naveKID);
+    std::cout << "nave " << naveKID << " consertada" << std::endl;
 }
 
 void Operacao::dois(PilhaGaragem &Garagem){
@@ -30,9 +29,8 @@ void Operacao::tres(FilaOficina &Oficina){
 }
 
 void Operacao::naveX(int naveX, ListaCombate &EmCombate, FilaOficina &Oficina){
-    CelulaNave* naveK;
-    naveK = EmCombate.removeNave(naveX);
-    int kID = naveK->getID();
-    Oficina.enfilera(kID);
-    std::cout << "nave " << kID << " avariada" << std::endl;
+    int naveKID;
+    naveKID = EmCombate.removeNave(naveX);
+    Oficina.enfilera(naveKID);
+    std::cout << "nave " << naveKID << " avariada" << std::endl;
 }

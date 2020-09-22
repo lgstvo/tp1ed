@@ -43,10 +43,10 @@ void FilaOficina::enfilera(int naveID){
     fim->setProxima(novaNave);
     setFim(novaNave);
 
-    tamanho++;
+    setTamanho(tamanho++);
 }
 
-CelulaNave* FilaOficina::removeNave(){
+int FilaOficina::removeNave(){
     // remove a nave da fila (repara a nave)
 
     int tamanho = getTamanho();
@@ -62,7 +62,10 @@ CelulaNave* FilaOficina::removeNave(){
 
     if(tamanho == -1) setFim(head);
 
-    return desenfilerada;
+    int desenfileradaID = desenfilerada->getID();
+    delete desenfilerada;
+
+    return desenfileradaID;
 }
 
 void FilaOficina::limpa(){

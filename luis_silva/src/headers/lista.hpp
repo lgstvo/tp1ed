@@ -28,7 +28,7 @@ class ListaCombate{
 
         void insere(CelulaNave nave);
 
-        CelulaNave* removeNave(int naveID);
+        int removeNave(int naveID);
         void limpa();
         void imprime();
 };

@@ -65,7 +65,7 @@ void ListaCombate::insere(CelulaNave nave){
     
 }
 
-CelulaNave* ListaCombate::removeNave(int naveID){
+int ListaCombate::removeNave(int naveID){
     // remove a nave na posição naveID
 
     primeira = getPrimeira();
@@ -89,7 +89,10 @@ CelulaNave* ListaCombate::removeNave(int naveID){
         setUltima(ponteiroRemove);
     }
 
-    return naveRemovida;
+    int naveRemovidaID = naveRemovida->getID();
+    delete naveRemovida;
+
+    return naveRemovidaID;
 }
 
 void ListaCombate::limpa(){

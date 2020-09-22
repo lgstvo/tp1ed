@@ -29,7 +29,7 @@ class FilaOficina{
 
         void enfilera(int naveID);
 
-        CelulaNave* removeNave();
+        int removeNave();
         void limpa();
         void imprime();
 

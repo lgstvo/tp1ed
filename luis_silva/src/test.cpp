@@ -28,17 +28,64 @@ int main() {
 
 */
 
-    CelulaNave* nave = new CelulaNave();
-    CelulaNave* nave2 = new CelulaNave();
+    Garagem.empilha(1);
+    Garagem.empilha(2);
+    Garagem.empilha(3);
+    Garagem.empilha(4);
+    Garagem.empilha(5);
+    Garagem.empilha(6);
 
-    nave->setID(5);
-    nave2->setID(10);
+    Garagem.imprime();
+    cout << endl;
 
-    EmCombate.insere(*nave);
-    EmCombate.insere(*nave2);
-    
+    CelulaNave nave1;
+    CelulaNave nave2;
+    CelulaNave nave3;
+    CelulaNave nave4;
+    CelulaNave nave5;
+    CelulaNave nave6;
+
+    nave1 = Garagem.desempilha();
+    nave2 = Garagem.desempilha();
+    nave3 = Garagem.desempilha();
+    nave4 = Garagem.desempilha();
+    nave5 = Garagem.desempilha();
+    nave6 = Garagem.desempilha();
+
+    Garagem.imprime();
+    cout << endl;
+
+    EmCombate.insere(nave1);
+    EmCombate.insere(nave2);
+    EmCombate.insere(nave3);
+    EmCombate.insere(nave4);
+    EmCombate.insere(nave5);
+    EmCombate.insere(nave6);
+
     EmCombate.imprime();
+    cout << endl;
 
     
+    nave1 = EmCombate.removeNave(1);
+
+    EmCombate.imprime();
+    cout << endl;
+
+    Oficina.enfilera(nave1->getID());
+
+    Oficina.imprime();
+    cout << endl;
+
+    nave1 = Oficina.removeNave();
+
+    Oficina.imprime();
+    cout << endl;
+
+    Garagem.empilha(nave1->getID());
+
+    Garagem.imprime();
+    cout << endl;
+
+
 	return 0;
 }
