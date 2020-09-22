@@ -52,20 +52,14 @@ int FilaOficina::removeNave(){
     int tamanho = getTamanho();
     CelulaNave* head = getInicio();
     CelulaNave* inicio;
+    int naveRemovidaID = head->getProxima()->getID();
 
-    CelulaNave* desenfilerada = new CelulaNave();
-
-    inicio = head->getProxima();
-    desenfilerada = inicio;
-    head->setProxima(inicio->getProxima());
-    setTamanho(tamanho--);
-
-    if(tamanho == -1) setFim(head);
-
-    int desenfileradaID = desenfilerada->getID();
-    delete desenfilerada;
-
-    return desenfileradaID;
+    inicio = getInicio();
+    setInicio(head->getProxima());
+    delete inicio;
+    tamanho--;
+    setTamanho(tamanho);
+    return naveRemovidaID;
 }
 
 void FilaOficina::limpa(){
