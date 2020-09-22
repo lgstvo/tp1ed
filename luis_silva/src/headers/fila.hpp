@@ -27,7 +27,7 @@ class FilaOficina{
 
         void setTamanho(int tamanho);
 
-        void enfilera(CelulaNave nave);
+        void enfilera(int naveID);
 
         CelulaNave* removeNave();
         void limpa();

@@ -59,10 +59,10 @@ void ListaCombate::insere(CelulaNave nave){
     CelulaNave* ultima = getUltima();
     CelulaNave* novaNave = new CelulaNave();
     novaNave->setID(nave.getID());
-
     ultima->setProxima(novaNave);
     novaNave->setProxima(NULL);
     setUltima(novaNave);
+    
 }
 
 CelulaNave* ListaCombate::removeNave(int naveID){
@@ -78,12 +78,17 @@ CelulaNave* ListaCombate::removeNave(int naveID){
         //std::cout << "ITERACAO " << posicao << " " << ponteiroRemove->getID() << " " << naveID << std::endl;
         posicao++;
     }
-
     ponteiroRemove = posiciona(posicao, 1);
+    
+    
     naveRemovida = ponteiroRemove->getProxima();
     ponteiroRemove->setProxima(naveRemovida->getProxima());
     naveRemovida->setProxima(NULL);
-    
+
+    if(ponteiroRemove->getProxima() == NULL){
+        setUltima(ponteiroRemove);
+    }
+
     return naveRemovida;
 }
 
@@ -105,7 +110,6 @@ void ListaCombate::limpa(){
 }
 
 void ListaCombate::imprime(){
-    // imprime a lista, útil para testes
 
     CelulaNave* ponteiroImprime = getPrimeira();
     int impressao;

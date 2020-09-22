@@ -32,7 +32,7 @@ void Operacao::tres(FilaOficina &Oficina){
 void Operacao::naveX(int naveX, ListaCombate &EmCombate, FilaOficina &Oficina){
     CelulaNave* naveK;
     naveK = EmCombate.removeNave(naveX);
-    Oficina.enfilera(*naveK);
     int kID = naveK->getID();
+    Oficina.enfilera(kID);
     std::cout << "nave " << kID << " avariada" << std::endl;
 }

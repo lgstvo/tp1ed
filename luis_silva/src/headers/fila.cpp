@@ -33,13 +33,12 @@ void FilaOficina::setFim(CelulaNave* nave){
     this->fim = nave;
 }
 
-void FilaOficina::enfilera(CelulaNave nave){
+void FilaOficina::enfilera(int naveID){
     // adciona naves à fila de reparo
     
     int tamanho = getTamanho();
     CelulaNave* fim = getFim();
-    CelulaNave* novaNave = new CelulaNave();
-    novaNave->setID(nave.getID());
+    CelulaNave* novaNave = new CelulaNave(naveID);
     
     fim->setProxima(novaNave);
     setFim(novaNave);
@@ -60,6 +59,8 @@ CelulaNave* FilaOficina::removeNave(){
     desenfilerada = inicio;
     head->setProxima(inicio->getProxima());
     setTamanho(tamanho--);
+
+    if(tamanho == -1) setFim(head);
 
     return desenfilerada;
 }
