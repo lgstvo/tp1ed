@@ -13,13 +13,14 @@ using namespace std;
 int main() {
 
 	int num_frotas, i, id_nave, operacao;
-
+	
 	PilhaGaragem Garagem = PilhaGaragem();
 	ListaCombate EmCombate = ListaCombate();
 	FilaOficina Oficina = FilaOficina();
 	Operacao Comando = Operacao();
 
 	cin >> num_frotas;
+	if(num_frotas > 5000) num_frotas = 5000;
 
 	for(i=0; i < num_frotas; i++){
 		cin >> id_nave;
